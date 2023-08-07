@@ -10,7 +10,7 @@ class UserModel(CommonInfoModel):
     mobile_number = models.PositiveBigIntegerField(unique=True, null=True)
     email_id = models.EmailField(blank=True, null=True)
     profile_image = models.FileField(upload_to="images/user_profile_image", null=True)
-    followers = models.ForeignKey('self', on_delete=models.CASCADE)
+    followers = models.ManyToManyField('self', blank=True, related_name='followers')
 
     class Meta:
         db_table = "UserModel"

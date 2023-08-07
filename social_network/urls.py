@@ -20,7 +20,11 @@ from social_media import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    #
+    path('admin_registraion', views.AdminView.as_view()),
+    path('user_registraion', views.UserView.as_view()),
     # --------------------------    POST    ----------------------------#
+    path('posts', views.PostView.as_view()),
     path('like_post', views.PostLikeView.as_view()),
     path('dislike_post', views.PostDisLikeView.as_view()),
     path('post_count_details', views.PostDetailCountView.as_view()),

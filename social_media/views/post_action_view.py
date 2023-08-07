@@ -91,7 +91,7 @@ class PostDetailCountView(APIView):
 
     def get(self, request):
         """
-        Used to add dislike to a post
+        Used to view the number of likes and dislikes of a post
         """
         try:
             payload = request.data.dict()
@@ -115,7 +115,7 @@ class PostLikedUsersView(APIView):
 
     def get(self, request):
         """
-        Used to add dislike to a post
+        Used to get liked users of a post
         """
         try:
             payload = request.data.dict()
